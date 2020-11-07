@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("./fonts/Poppins/Poppins-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./fonts/Raleway/Raleway-Light.ttf");
+}
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("./fonts/Raleway/Raleway-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Raleway-Medium";
+  src: url("./fonts/Raleway/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserat-Light";
+  src: url("./fonts/Montserat/Montserrat-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Montserat-Regular";
+  src: url("./fonts/Montserat/Montserrat-Regular.ttf");
+}

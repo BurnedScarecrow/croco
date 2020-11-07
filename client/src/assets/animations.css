@@ -1,0 +1,166 @@
+/* Chat toggler */
+
+@keyframes slide-up{
+  from{
+    max-height: 60vh;
+  }
+  to{
+    max-height: 30px;
+  }
+}
+
+@keyframes slide-down{
+  from{
+    max-height: 30px;
+  }
+  to{
+    max-height: 60vh;
+  }
+}
+
+/* Topline animations */
+@keyframes hover_moon{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--text-color);
+  }
+}
+
+@keyframes hover_sun{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--text-color);
+  }
+}
+
+/* Preparation animations */
+@keyframes fade-in-prep{
+  to{
+    height: 65vh;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-rules-button{
+  to{
+    height: 10%;
+    opacity: 1;
+  }
+}
+
+@keyframes arrow-anim{
+  50%{
+    transform: translateX(50%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+
+/* Logo aminations */
+@keyframes stroke-anim{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-1{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--orange); /*#f63;*/
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-2{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--green) /*#4a4*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-3{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--blue)/*#77f*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-4{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--red)/*#e33*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-5{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--yellow)/*#bb0*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-6{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--light); /*#655;*/
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-7{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--pink)/*#0bb*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-8{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--light-blue) /*#e0e*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes fill-9{
+  from{
+    fill: transparent;
+  }
+  to{
+    fill: var(--purple); /*#e0e*/;
+    /* stroke: transparent; */
+  }
+}
+@keyframes minimize-logo-wrapper{
+  to{
+    height: 15vh;
+  }
+}
+@keyframes minimize-logo{
+  to{
+    width: 300px;
+  }  
+}
+@keyframes drop-fill{
+  to{
+    fill: transparent;
+  }  
+}

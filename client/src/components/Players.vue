@@ -89,11 +89,24 @@ export default {
       this.$toast.error(
         "Вы были отключены сервером, попробуйте переподключиться.",
         {
-          timeout: 2000,
+          timeout: 3000,
           position: "bottom-right"
         }
       );
       this.$router.push("/");
+    }
+  },
+  sockets: {
+    disconnect: function(reason) {
+      if (reason === "io server disconnect") {
+        console.log(
+          "The disconnection was initiated by the server, you need to reconnect manually"
+        );
+        this.$socket.connect();
+      } else {
+        console.log("Disconnected, reason -", reason);
+      }
+      // else the socket will automatically try to reconnect
     }
   },
   methods: {

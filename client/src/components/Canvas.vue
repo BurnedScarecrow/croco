@@ -83,7 +83,8 @@ export default {
       color_picker: null,
       brush: null,
       clear_button: null,
-      image_data: new Image()
+      image_data: new Image(),
+      old_image: ""
     };
   },
   computed: {
@@ -229,6 +230,12 @@ export default {
       CONTEXT.ctx.fillRect(0, 0, 320, 320);
     };
   },
+  sockets: {
+    clear_canvas: function() {
+      console.log("Server asked to clear canvas");
+      this.clearImage();
+    }
+  },
   methods: {
     // Get the position of the mouse relative to the canvas
     getMousePos: function(canvasDom, mouseEvent) {
@@ -263,14 +270,20 @@ export default {
           return;
         }
         this.renderCanvas();
-        this.$socket.emit("draw", this.image_data, this.getJoined, data => {
-          if (data == 1) {
-            // console.log(`callback for ${this.getId} == 1`)
-            this.ctx.fillStyle = "white";
-            this.ctx.fillRect(0, 0, 320, 320);
-            return;
-          }
-        });
+        if (this.image_data != this.old_image) {
+          this.old_image = this.image_data;
+          // console.log("send");
+          this.$socket.emit("draw", this.image_data, this.getJoined, data => {
+            if (data == 1) {
+              // console.log(`callback for ${this.getId} == 1`)
+              this.ctx.fillStyle = "white";
+              this.ctx.fillRect(0, 0, 320, 320);
+              return;
+            }
+          });
+        } else {
+          // console.log("Don't send");
+        }
       } else {
         this.clearImage();
         // console.log(`draw ${this.getId}`)
@@ -283,6 +296,7 @@ export default {
       this.ctx.fillRect(0, 0, 320, 320);
       this.image_data = this.canvas.toDataURL();
       this.$socket.emit("draw", this.image_data, this.getJoined, data => {
+        console.log("Done");
         if (data == 1) {
           // console.log(`callback 2 for ${this.getId} == 1`)
           this.ctx.fillStyle = "white";

@@ -14,7 +14,7 @@ Vue.use(
     debug: false,
     // connection: "http://192.168.43.134:5000",
     // connection: "http://192.168.43.90:5000",
-    connection: 'http://localhost:5000',
+    connection: "http://3.14.151.80/",
     vuex: {
       store,
       actionPrefix: "SOCKET_",

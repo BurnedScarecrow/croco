@@ -18,11 +18,22 @@ const words3 = fs.readFileSync('./words/hard.words').toString().toLowerCase().sp
 const ROOMS = new Map([]);
 let EMPTY_IMAGE = null;
 let TIMER = null;
+let PINGPONG = null;
+
 
 io.on('connection', (socket) => {
   console.log(`New connection`, socket.id);
   socket.emit('user_data', socket.id);
   refreshList();
+
+  PINGPONG = setInterval(() => {
+    // console.log('emit ping to', socket.id);
+    socket.emit('ping');
+  }, 5000);
+
+  socket.on('ping-pong', (id) => {
+    // console.log('received pong from', id);
+  });
 
   socket.on('new_message', (message, key) => {
     console.log(`${socket.id} sent message ${message} to ${key}`);
@@ -66,6 +77,8 @@ io.on('connection', (socket) => {
 
   socket.on('disconnecting', () => {
     console.log(`Connection ${socket.id} canceled.`);
+    clearInterval(PINGPONG);
+    PINGPONG = null;
     eraseRooms();
   });
 
@@ -221,6 +234,7 @@ io.on('connection', (socket) => {
       let w1 = null; let w2 = null; let w3 = null;
       switch (room.vocab) {
         case '2':
+        case 2:
           console.log('сложность 2');
           do {
             w1 = words3[Math.floor(Math.random() * Math.floor(words3.length))].toString().trim();
@@ -229,6 +243,7 @@ io.on('connection', (socket) => {
           } while (w1 == w2 || w2 == w3 || w1 == w3);
           break;
         case '1':
+        case 1:
           console.log('сложность 1');
           do {
             w1 = words2[Math.floor(Math.random() * Math.floor(words2.length))].toString().trim();
@@ -237,9 +252,9 @@ io.on('connection', (socket) => {
           } while (w1 == w2 || w2 == w3 || w1 == w3);
           break;
         case '0':
+        case 0:
           console.log('сложность 0');
         default:
-          console.log('сложность хз - ', room.vocab);
           do {
             w1 = words1[Math.floor(Math.random() * Math.floor(words1.length))].toString().trim();
             w2 = words1[Math.floor(Math.random() * Math.floor(words1.length))].toString().trim();
@@ -271,6 +286,9 @@ io.on('connection', (socket) => {
   });
 
   socket.on('choose_word', (word, key) => {
+    // if (room.painter == socket.id) {
+    socket.emit('clear_canvas');
+    // }
     if (!word) {
       return;
     }
@@ -393,7 +411,7 @@ function makeKey(length) {
   }
   return result;
 }
-app.use('/', express.static('dist'));
+app.use('/', express.static('../client/dist'));
 
 const PORT = 5000;
 server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

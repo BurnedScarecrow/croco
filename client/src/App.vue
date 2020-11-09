@@ -10,7 +10,7 @@ export default {
     return {
       toggleSwitch: null
     };
-  },
+  }
 };
 </script>
 
@@ -37,7 +37,7 @@ export default {
   --light-blue: #3498db; //#0bb;
   --yellow: #f1c40f; //#bb0;
   --orange: #e67e22; //#f63;
-  --pink: #F48FB1;
+  --pink: #f48fb1;
   --warn: #e74c3c;
 }
 

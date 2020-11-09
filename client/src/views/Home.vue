@@ -10,7 +10,6 @@
     <Preparation />
     <Footer />
     <Rules />
-
   </div>
 </template>
 

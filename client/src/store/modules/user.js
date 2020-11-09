@@ -108,7 +108,7 @@ export default {
     secret: ""
   },
   getters: {
-    getComplexity(state){
+    getComplexity(state) {
       return state.new_room.vocab;
     },
     getId(state) {

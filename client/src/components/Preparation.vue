@@ -98,7 +98,7 @@
           </div>
           <div id="rt">игроки</div>
 
-           <div id="decrease-complexity" @click="decComplexity()">
+          <div id="decrease-complexity" @click="decComplexity()">
             <svg
               class="arrow-left small"
               width="358"
@@ -112,7 +112,7 @@
               />
             </svg>
           </div>
-          <div id="complexity-number">{{ getComplexity+1 }}</div>
+          <div id="complexity-number">{{ getComplexity + 1 }}</div>
           <div id="increase-complexity" @click="incComplexity()">
             <svg
               class="arrow-right small"
@@ -128,7 +128,7 @@
             </svg>
           </div>
           <div id="ct">уровень</div>
-        <!-- </div>
+          <!-- </div>
         <div id="room-time"> -->
           <div id="decMins" @click="decMins()">
             <svg
@@ -229,8 +229,8 @@
         <div id="rooms-list">
           <div id="rooms-list-head">
             <span title="Название комнаты">Комнаты</span>
-          
-           <!-- size -->
+
+            <!-- size -->
             <svg
               width="512"
               height="512"
@@ -253,8 +253,17 @@
             </svg>
 
             <!-- time -->
-            <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M495.372 333.944L449.56 308.665L495.376 283.376C505.496 277.789 511.536 267.552 511.533 255.993C511.531 244.439 505.489 234.21 495.374 228.631L449.551 203.344L495.373 178.054C505.49 172.47 511.531 162.238 511.531 150.682C511.531 139.127 505.49 128.895 495.373 123.311L460.268 103.935C456.645 101.934 452.081 103.251 450.079 106.876C448.078 110.502 449.395 115.063 453.021 117.065L488.126 136.442C493.391 139.347 496.534 144.671 496.534 150.683C496.534 156.695 493.391 162.02 488.126 164.925L278.862 280.424C264.547 288.324 247.453 288.324 233.138 280.424L23.8743 164.924C18.6092 162.019 15.4672 156.694 15.4672 150.682C15.4672 144.67 18.6092 139.346 23.8743 136.441L233.141 20.9393C247.455 13.0312 264.545 13.0312 278.862 20.9403L426.767 102.576C430.391 104.577 434.955 103.26 436.956 99.6336C438.957 96.0075 437.64 91.4464 434.014 89.4444L286.112 7.81213C267.257 -2.60404 244.744 -2.60404 225.891 7.81113L16.6282 123.311C6.51004 128.895 0.469944 139.127 0.469944 150.682C0.469944 162.238 6.51004 172.47 16.6282 178.054L62.4489 203.344L16.6262 228.63C6.51004 234.21 0.467944 244.439 0.465943 255.993C0.462943 267.552 6.50304 277.789 16.6242 283.376L62.4399 308.665L16.6252 333.945C6.50904 339.535 0.469944 349.77 0.469944 361.325C0.469944 372.88 6.50904 383.116 16.6282 388.707L97.7445 433.479C98.8935 434.113 100.136 434.414 101.362 434.414C104.005 434.414 106.567 433.014 107.934 430.537C109.935 426.912 108.618 422.35 104.992 420.348L23.8783 375.578C18.6122 372.668 15.4672 367.34 15.4682 361.325C15.4682 355.31 18.6122 349.981 23.8753 347.073L77.9602 317.23L225.885 398.878C235.316 404.084 245.657 406.686 256.001 406.686C266.343 406.686 276.689 404.083 286.115 398.879L434.043 317.23L488.125 347.072C493.392 349.981 496.536 355.31 496.536 361.325C496.536 367.34 493.392 372.668 488.128 375.576L278.864 491.066C264.551 498.964 247.453 498.965 233.131 491.066L131.257 434.837C127.631 432.837 123.069 434.154 121.068 437.778C119.066 441.404 120.384 445.965 124.009 447.967L225.883 504.198C235.314 509.399 245.657 511.999 255.999 511.999C266.341 511.999 276.684 509.398 286.109 504.197L495.376 388.706C505.492 383.117 511.531 372.881 511.531 361.326C511.532 349.77 505.492 339.535 495.372 333.944V333.944ZM278.866 385.749C264.549 393.654 247.452 393.654 233.132 385.749L23.8723 270.247C18.6052 267.339 15.4622 262.012 15.4632 255.997C15.4642 249.986 18.6062 244.665 23.8703 241.762L77.9672 211.91L225.891 293.555C235.318 298.757 245.659 301.358 256 301.358C266.341 301.358 276.682 298.757 286.109 293.555L434.033 211.91L488.131 241.763C493.394 244.665 496.536 249.986 496.537 255.997C496.539 262.012 493.395 267.34 488.129 270.247L278.866 385.749Z" fill="black"/>
+            <svg
+              width="512"
+              height="512"
+              viewBox="0 0 512 512"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M495.372 333.944L449.56 308.665L495.376 283.376C505.496 277.789 511.536 267.552 511.533 255.993C511.531 244.439 505.489 234.21 495.374 228.631L449.551 203.344L495.373 178.054C505.49 172.47 511.531 162.238 511.531 150.682C511.531 139.127 505.49 128.895 495.373 123.311L460.268 103.935C456.645 101.934 452.081 103.251 450.079 106.876C448.078 110.502 449.395 115.063 453.021 117.065L488.126 136.442C493.391 139.347 496.534 144.671 496.534 150.683C496.534 156.695 493.391 162.02 488.126 164.925L278.862 280.424C264.547 288.324 247.453 288.324 233.138 280.424L23.8743 164.924C18.6092 162.019 15.4672 156.694 15.4672 150.682C15.4672 144.67 18.6092 139.346 23.8743 136.441L233.141 20.9393C247.455 13.0312 264.545 13.0312 278.862 20.9403L426.767 102.576C430.391 104.577 434.955 103.26 436.956 99.6336C438.957 96.0075 437.64 91.4464 434.014 89.4444L286.112 7.81213C267.257 -2.60404 244.744 -2.60404 225.891 7.81113L16.6282 123.311C6.51004 128.895 0.469944 139.127 0.469944 150.682C0.469944 162.238 6.51004 172.47 16.6282 178.054L62.4489 203.344L16.6262 228.63C6.51004 234.21 0.467944 244.439 0.465943 255.993C0.462943 267.552 6.50304 277.789 16.6242 283.376L62.4399 308.665L16.6252 333.945C6.50904 339.535 0.469944 349.77 0.469944 361.325C0.469944 372.88 6.50904 383.116 16.6282 388.707L97.7445 433.479C98.8935 434.113 100.136 434.414 101.362 434.414C104.005 434.414 106.567 433.014 107.934 430.537C109.935 426.912 108.618 422.35 104.992 420.348L23.8783 375.578C18.6122 372.668 15.4672 367.34 15.4682 361.325C15.4682 355.31 18.6122 349.981 23.8753 347.073L77.9602 317.23L225.885 398.878C235.316 404.084 245.657 406.686 256.001 406.686C266.343 406.686 276.689 404.083 286.115 398.879L434.043 317.23L488.125 347.072C493.392 349.981 496.536 355.31 496.536 361.325C496.536 367.34 493.392 372.668 488.128 375.576L278.864 491.066C264.551 498.964 247.453 498.965 233.131 491.066L131.257 434.837C127.631 432.837 123.069 434.154 121.068 437.778C119.066 441.404 120.384 445.965 124.009 447.967L225.883 504.198C235.314 509.399 245.657 511.999 255.999 511.999C266.341 511.999 276.684 509.398 286.109 504.197L495.376 388.706C505.492 383.117 511.531 372.881 511.531 361.326C511.532 349.77 505.492 339.535 495.372 333.944V333.944ZM278.866 385.749C264.549 393.654 247.452 393.654 233.132 385.749L23.8723 270.247C18.6052 267.339 15.4622 262.012 15.4632 255.997C15.4642 249.986 18.6062 244.665 23.8703 241.762L77.9672 211.91L225.891 293.555C235.318 298.757 245.659 301.358 256 301.358C266.341 301.358 276.682 298.757 286.109 293.555L434.033 211.91L488.131 241.763C493.394 244.665 496.536 249.986 496.537 255.997C496.539 262.012 493.395 267.34 488.129 270.247L278.866 385.749Z"
+                fill="black"
+              />
             </svg>
 
             <!-- complexity -->
@@ -284,9 +293,10 @@
                 fill="black"
               />
             </svg>
-          
           </div>
-          <span id="empty-list" v-if="publicRooms.length == 0">Нет открытых комнат</span>
+          <span id="empty-list" v-if="publicRooms.length == 0"
+            >Нет открытых комнат</span
+          >
           <div
             class="room-item"
             @click="joinRoom(item.key, $event)"
@@ -298,12 +308,12 @@
             <div class="room-size">
               {{ item.players.length || 0 }}/{{ item.size }}
             </div>
-            
+
             <div class="room-time">
               {{ item.minutes }}:{{ item.seconds == 0 ? "00" : item.seconds }}
             </div>
             <div class="room-complexity">
-              {{ item.vocab == '0' ? '1' : item.vocab == '1' ? '2' : '3'}}
+              {{ item.vocab == "0" ? "1" : item.vocab == "1" ? "2" : "3" }}
             </div>
           </div>
         </div>
@@ -799,7 +809,7 @@ export default {
     height: auto;
     display: grid;
     align-items: flex-end;
-    grid-template-areas: 
+    grid-template-areas:
       "dp np ip . dc nc ic"
       "rt rt rt . ct ct ct"
       "dm m  im . ds s  is"
@@ -878,86 +888,84 @@ export default {
         margin-top: 5px;
       }
     }
-
-
   }
 
   // #room-time {
-    // display: grid;
-    // grid-template-areas:
-    //   "dm m  im  . ds s  is"
-    //   "mt mt mt  . st st st";
-    // width: 90%;
-    // margin: 15px auto;
-    // align-content: center;
-    // height: auto;
-    // margin-top: 5px;
+  // display: grid;
+  // grid-template-areas:
+  //   "dm m  im  . ds s  is"
+  //   "mt mt mt  . st st st";
+  // width: 90%;
+  // margin: 15px auto;
+  // align-content: center;
+  // height: auto;
+  // margin-top: 5px;
 
-    #decMins {
-      grid-area: dm;
-      align-self: center;
-      transition: all ease 0.2s;
-      cursor: pointer;
-    }
+  #decMins {
+    grid-area: dm;
+    align-self: center;
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 
-    #mins {
-      grid-area: m;
-      width: 20px;
-      margin: 0 auto;
-      align-self: center;
-    }
+  #mins {
+    grid-area: m;
+    width: 20px;
+    margin: 0 auto;
+    align-self: center;
+  }
 
-    #incMins {
-      grid-area: im;
-      align-self: center;
-      transition: all ease 0.2s;
-      cursor: pointer;
-    }
+  #incMins {
+    grid-area: im;
+    align-self: center;
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 
-    #clock-img {
-      line-height: 1em;
-      grid-area: i;
-      align-self: center;
-    }
+  #clock-img {
+    line-height: 1em;
+    grid-area: i;
+    align-self: center;
+  }
 
-    #decSecs {
-      grid-area: ds;
-      align-self: center;
-      transition: all ease 0.2s;
-      cursor: pointer;
-    }
+  #decSecs {
+    grid-area: ds;
+    align-self: center;
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 
-    #secs {
-      grid-area: s;
-      align-self: center;
-      margin: 0 auto;
-      width: 20px;
-      // font-size: 1.1em;
-      // line-height: 1em;
-    }
+  #secs {
+    grid-area: s;
+    align-self: center;
+    margin: 0 auto;
+    width: 20px;
+    // font-size: 1.1em;
+    // line-height: 1em;
+  }
 
-    #incSecs {
-      grid-area: is;
-      align-self: center;
-      transition: all ease 0.2s;
-      cursor: pointer;
-    }
+  #incSecs {
+    grid-area: is;
+    align-self: center;
+    transition: all ease 0.2s;
+    cursor: pointer;
+  }
 
-    #mt {
-      grid-area: mt;
-      align-self: center;
-      font-size: 0.8em;
-      margin-bottom: 20px;
-      color: var(--text-color);
-    }
+  #mt {
+    grid-area: mt;
+    align-self: center;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
 
-    #st {
-      grid-area: st;
-      align-self: center;
-      font-size: 0.8em;
-      margin-bottom: 20px;
-      color: var(--text-color);
-    }
+  #st {
+    grid-area: st;
+    align-self: center;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
   // }
 
   #create {
@@ -989,7 +997,7 @@ export default {
   flex-direction: column;
 
   #private-game {
-  align-items: center;
+    align-items: center;
     width: 95%;
     display: flex;
     justify-content: center;
@@ -1052,15 +1060,15 @@ export default {
       justify-self: center;
       // margin: 0 5px;
 
-      &:nth-child(1){
+      &:nth-child(1) {
         grid-area: size;
       }
 
-      &:nth-child(2){
+      &:nth-child(2) {
         grid-area: time;
       }
 
-      &:nth-child(3){
+      &:nth-child(3) {
         grid-area: complexity;
       }
 
@@ -1084,7 +1092,7 @@ export default {
     justify-content: center;
     height: 160px;
     align-items: center;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   #rooms-list {
@@ -1106,7 +1114,7 @@ export default {
       cursor: pointer;
       font-size: 12px;
       line-height: 20px;
-      height:18px;
+      height: 18px;
 
       &:hover {
         background: rgba(0, 0, 0, 0.01);

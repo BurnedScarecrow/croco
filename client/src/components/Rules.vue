@@ -105,11 +105,11 @@ export default {
 
     .hide-rules {
       cursor: pointer;
-      height:20px;
+      height: 20px;
       width: 20px;
 
-      path{
-      transition: all 0.3s ease;
+      path {
+        transition: all 0.3s ease;
         fill: var(--secondary-color);
         stroke: var(--secondary-color);
       }

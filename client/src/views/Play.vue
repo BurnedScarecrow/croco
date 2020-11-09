@@ -39,7 +39,7 @@
       <span>
         Сложность
       </span>
-      
+
       <input
         type="range"
         max="2"
@@ -159,7 +159,6 @@ export default {
       }
     });
 
-
     this.detectColorScheme();
 
     //identify the toggle switch HTML element
@@ -181,6 +180,10 @@ export default {
     }
   },
   sockets: {
+    ping: function() {
+      console.log("ping form server");
+      this.$socket.emit("ping-pong", this.getId);
+    },
     init_game: function(data) {
       this.$store.commit("updateRoom", data.room);
 
@@ -425,21 +428,19 @@ main {
   border-radius: 4px;
   font-family: "Montserat-Light", "Raleway-Light", "Poppins", sans-serif;
 
-  span:first-child{
+  span:first-child {
     grid-area: t1;
   }
 
-  span:last-child{
+  span:last-child {
     grid-area: t2;
     text-align-last: right;
   }
 
-  input{
+  input {
     grid-area: ranger;
   }
-
 }
-
 
 @media screen and (min-width: 1024px) {
   main {
